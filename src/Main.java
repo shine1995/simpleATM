@@ -26,7 +26,8 @@ public class Main {
             String account = scanner.nextLine();
             // waiting for input, if no valid key entry add new <key,value>
 
-            person.putIfAbsent(account, (Math.random() * 100.00));
+            // added logic to limit double to 2 decimal points
+            person.putIfAbsent(account, (double) Math.round(Math.random() * 100));
             System.out.println("Hello, " + account);
 
             /* Showing three options
